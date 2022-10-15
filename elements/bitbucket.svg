@@ -1,0 +1,13 @@
+<svg class="svg-bitbucket" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88.966" height="80" viewBox="0 0 88.966 80">
+    <defs>
+        <linearGradient id="linear-gradient" x1="1.086" y1="0.138" x2="0.469" y2="0.788" gradientUnits="objectBoundingBox">
+        <stop offset="0.18" stop-color="#0052cc"/>
+        <stop offset="1" stop-color="#2684ff"/>
+        </linearGradient>
+    </defs>
+    <g id="Group_13" data-name="Group 13" transform="translate(0 0.001)">
+        <path id="Path_47" data-name="Path 47" d="M92,103.416h18.575l4.483-26.175h-28Z" transform="translate(-56.805 -50.398)" fill="none"/>
+        <path id="Path_48" data-name="Path 48" d="M2.887,0A2.85,2.85,0,0,0,.037,3.307l12.1,73.457A3.877,3.877,0,0,0,15.928,80h58.05a2.85,2.85,0,0,0,2.85-2.394l12.1-74.284A2.85,2.85,0,0,0,86.079.014ZM53.84,53.09H35.311L30.295,26.88H58.329Z" transform="translate(0)" fill="#2684ff"/>
+        <path id="Path_49" data-name="Path 49" d="M110.2,77.242H83.47l-4.486,26.189H60.471l-21.86,25.947a3.859,3.859,0,0,0,2.492.94H99.121a2.848,2.848,0,0,0,2.848-2.392Z" transform="translate(-25.193 -50.399)" fill="url(#linear-gradient)"/>
+    </g>
+</svg>

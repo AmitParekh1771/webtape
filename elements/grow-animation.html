@@ -1,0 +1,188 @@
+<style>
+        
+    .grow-display {
+        perspective: 1000px;
+    }
+
+    .grow-animation-container {
+        perspective: 1000px;
+        transform: rotateY(44deg) rotateX(5deg);
+        transform-style: preserve-3d;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 350px;
+    }
+
+    .grow-animation-slide {
+        position: absolute;
+    }
+
+    .grow-animation-slide:nth-child(1) {
+        animation: grow-slide-1 20s ease 0s infinite normal forwards;
+    }
+
+    @keyframes grow-slide-1 {
+        0% {
+            transform: translate3d(0, 0, 60px);
+            z-index: 3;
+        }
+        22.22% {
+            opacity: 1;
+            transform: translate3d(0, 0, 60px);
+            z-index: 3;
+        }
+        27.71% {
+            opacity: 0;
+            transform: translate3d(0, 0, 120px);
+            z-index: 3;
+        }
+        27.72% {
+            opacity: 0;
+            transform: translate3d(0, 0, -120px);
+            z-index: 1;
+        }
+        33.33% {
+            opacity: 1;
+            transform: translate3d(0, 0, -60px);
+            z-index: 1;
+        }
+        55.55% {
+            transform: translate3d(0, 0, -60px);
+            z-index: 1;
+        }
+        66.66% {
+            transform: translate3d(0, 0, 0px);
+            z-index: 2;
+        }
+        88.88% {
+            transform: translate3d(0, 0, 0px);
+            z-index: 2;
+        }
+        100% {
+            transform: translate3d(0, 0, 60px);
+            z-index: 3;
+        }
+    }
+
+    .grow-animation-slide:nth-child(2) {
+        animation: grow-slide-2 20s ease 0s infinite normal forwards;
+    }
+
+    @keyframes grow-slide-2 {
+        55.55% {
+            opacity: 1;
+            transform: translate3d(0, 0, 60px);
+            z-index: 3;
+        }
+        61.04% {
+            opacity: 0;
+            transform: translate3d(0, 0, 120px);
+            z-index: 3;
+        }
+        61.05% {
+            opacity: 0;
+            transform: translate3d(0, 0, -120px);
+            z-index: 1;
+        }
+        66.66% {
+            opacity: 1;
+            transform: translate3d(0, 0, -60px);
+            z-index: 1;
+        }
+        88.88% {
+            transform: translate3d(0, 0, -60px);
+            z-index: 1;
+        }
+        100% {
+            transform: translate3d(0, 0, 0px);
+            z-index: 2;
+        }
+        0% {
+            transform: translate3d(0, 0, 0px);
+            z-index: 2;
+        }
+        22.22% {
+            transform: translate3d(0, 0, 0px);
+            z-index: 2;
+        }
+        33.33% {
+            transform: translate3d(0, 0, 60px);
+            z-index: 3;
+        }
+    }
+
+    .grow-animation-slide:nth-child(3) {
+        transform-origin: 100% 50%;
+        animation: grow-slide-3 20s ease 0s infinite normal forwards;
+    }
+
+    @keyframes grow-slide-3 {
+        88.88% {
+            opacity: 1;
+            transform: translate3d(0, 0, 60px);
+            z-index: 3;
+        }
+        94.37% {
+            opacity: 0;
+            transform: translate3d(0, 0, 120px);
+            z-index: 3;
+        }
+        94.38% {
+            opacity: 0;
+            transform: translate3d(0, 0, -120px);
+            z-index: 1;
+        }
+        100% {
+            opacity: 1;
+            transform: translate3d(0, 0, -60px);
+            z-index: 1;
+        }
+        0% {
+            transform: translate3d(0, 0, -60px);
+            z-index: 1;
+        }
+        22.22% {
+            transform: translate3d(0, 0, -60px);
+            z-index: 1;
+        }
+        33.33% {
+            transform: translate3d(0, 0, 0px);
+            z-index: 2;
+        }
+        55.55% {
+            transform: translate3d(0, 0, 0px);
+            z-index: 2;
+        }
+        66.66% {
+            transform: translate3d(0, 0, 60px);
+            z-index: 3;
+        }
+    }
+
+    .grow-svg {
+        max-width: 400px;
+        width: 90vw;
+        height: 100%;
+        box-shadow: -20px 40px 10px -30px #d3d3d3, 
+        -2px 0 0 -1px #777, 
+        -4px 0 0 -2px #777;
+    }
+
+</style>
+
+
+<div class="grow-display">
+    <div class="grow-animation-container">
+        <div class="grow-animation-slide">
+            <img class="grow-svg" src="/elements/grow-home.svg" width="330" height="295" loading="lazy" alt="grow images">
+        </div>
+        <div class="grow-animation-slide">
+            <img class="grow-svg" src="/elements/grow-workshop-list.svg" width="330" height="295" loading="lazy" alt="grow images">
+        </div>
+        <div class="grow-animation-slide">
+            <img class="grow-svg" src="/elements/grow-workshop.svg" width="330" height="295" loading="lazy" alt="grow images">
+        </div>
+    </div>
+</div>
