@@ -25,6 +25,6 @@ function ComponentFactory(metaData) {
 }
 
 
-customElements.define('stack-animation', ComponentFactory({ elementUrl: '/elements/stack-animation.html'}));
-customElements.define('webtape-grow-animation', ComponentFactory({ elementUrl: '/elements/grow-animation.html'}));
-customElements.define('landing-page-animation', ComponentFactory({ elementUrl: '/elements/landing-page-animation.html'}));
+customElements.define('stack-animation', ComponentFactory({ elementUrl: './elements/stack-animation.html'}));
+customElements.define('webtape-grow-animation', ComponentFactory({ elementUrl: './elements/grow-animation.html'}));
+customElements.define('landing-page-animation', ComponentFactory({ elementUrl: './elements/landing-page-animation.html'}));
