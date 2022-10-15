@@ -1,0 +1,31 @@
+
+/* ubuntu fonts import */
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/Ubuntu/Ubuntu-Bold.ttf) format('truetype');
+    unicode-range: U+0000-007F;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf) format('truetype');
+    unicode-range: U+0000-007F;
+    font-display: swap;
+}
+
+
+/* font awesome import */
+
+@font-face {
+    font-family: 'Fa solid 900';
+    src: url(../fonts/fa/fa-solid-900.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

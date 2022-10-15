@@ -1,0 +1,446 @@
+<style>
+        
+    .stack-display {
+        perspective: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stack-animation {
+        position: relative;
+        overflow: hidden;
+        height: 120vw;
+        max-height: 500px;
+        width: 100%;
+        max-width: 450px;
+        margin: auto;
+        padding: 0px 10px;
+        transform: rotateX(5deg) rotateY(350deg);
+        transform-origin: 70% 100%;
+    }
+
+    .stack-animation::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .stack-animation::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .stack-container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        animation: linear-scroll 50s linear 0s infinite normal forwards;
+    }
+
+    @keyframes linear-scroll {
+        0% {
+            transform: translateY(0%);
+        }
+        100% {
+            transform: translateY(-50%);
+        }
+    }
+
+    .stack-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 25vw;
+        max-height: 130px;
+        perspective: 500px;
+    }
+
+    .svg-hexagon {
+        fill: #e7e7e7;
+        width: 120%;
+    }
+
+    .svg-hexagon-shadow {
+        fill: #70707080;
+        width: 120%;
+        transform: translate3d(12px, 8px, 0px);
+    }
+
+    .svg-hexagon-depth {
+        fill: #333;
+        width: 120%;
+        transform: translate3d(5px, 3px, 0px);
+    }
+
+    .svg-logo {
+        height: 55%;
+    }
+
+    .stack-item img {
+        position: absolute;
+    }
+
+    .column-start-1 {
+        grid-column: 1 / span 2;
+    }
+
+    .column-start-2 {
+        grid-column: 2 / span 2;
+    }
+
+    .column-start-3 {
+        grid-column: 3 / span 2;
+    }
+
+    .column-start-4 {
+        grid-column: 4 / span 2;
+    }
+
+    .column-start-5 {
+        grid-column: 5 / span 2;
+    }
+
+</style>
+
+
+<div class="stack-display">
+    <div class="stack-animation">
+        <div class="stack-container">
+            <div class="stack-item column-start-1">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/javascript.svg" loading="lazy" alt="stack svg">
+            </div>
+    
+            <div class="stack-item column-start-3">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/angular.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-5">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/typescript.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-2">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/html.svg" loading="lazy" alt="stack svg">
+
+            </div>
+    
+            <div class="stack-item column-start-4">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/css.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-1">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/node.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-3">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/mongo.svg" loading="lazy" alt="stack svg">
+            </div>
+    
+            <div class="stack-item column-start-5">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/bootstrap.svg" loading="lazy" alt="stack svg">
+            </div>
+    
+            <div class="stack-item column-start-2">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/firebase.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-4">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/heroku.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-1">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/git.svg" loading="lazy" alt="stack svg">
+            </div>
+    
+            <div class="stack-item column-start-3">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/github.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-5">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/bitbucket.svg" loading="lazy" alt="stack svg">
+            </div>
+      
+            <div class="stack-item column-start-2">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/xd.svg" loading="lazy" alt="stack svg" >
+    
+            </div>
+    
+            <div class="stack-item column-start-4">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/webflow.svg" loading="lazy" alt="stack svg">
+                  
+            </div>
+
+            <!-- repeating -->
+            <div class="stack-item column-start-1">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/javascript.svg" loading="lazy" alt="stack svg">
+            </div>
+    
+            <div class="stack-item column-start-3">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/angular.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-5">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/typescript.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-2">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/html.svg" loading="lazy" alt="stack svg">
+
+            </div>
+    
+            <div class="stack-item column-start-4">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/css.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-1">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/node.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-3">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/mongo.svg" loading="lazy" alt="stack svg">
+            </div>
+    
+            <div class="stack-item column-start-5">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/bootstrap.svg" loading="lazy" alt="stack svg">
+            </div> 
+            
+            <div class="stack-item column-start-2">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/firebase.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-4">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/heroku.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-1">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/git.svg" loading="lazy" alt="stack svg">
+            </div>
+    
+            <div class="stack-item column-start-3">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/github.svg" loading="lazy" alt="stack svg">
+    
+            </div>
+    
+            <div class="stack-item column-start-5">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/bitbucket.svg" loading="lazy" alt="stack svg">
+            </div>
+      
+            <div class="stack-item column-start-2">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/xd.svg" loading="lazy" alt="stack svg"> 
+    
+            </div>
+    
+            <div class="stack-item column-start-4">
+                <img class="svg-hexagon-shadow" src="/elements/hexagon-shadow.svg" loading="lazy" alt="hexagon shadow">
+    
+                <img class="svg-hexagon-depth" src="/elements/hexagon-depth.svg" loading="lazy" alt="hexagon depth">
+    
+                <img class="svg-hexagon" src="/elements/hexagon.svg" loading="lazy" alt="hexagon">
+    
+                <img class="svg-logo" src="/elements/webflow.svg" loading="lazy" alt="stack svg">
+                  
+            </div>
+
+        </div>
+    </div>
+</div>
