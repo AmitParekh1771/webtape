@@ -61,12 +61,6 @@ ul {
 }
 
 .nav-section {
-    position: sticky;
-    z-index: 99;
-    left: 0%;
-    top: 0%;
-    right: 0%;
-    bottom: auto;
     background-color: var(--dark);
 }
 
@@ -125,6 +119,10 @@ ul {
 
 .svg {
     font-family: 'Fa solid 900', sans-serif;
+    user-select: none;
+}
+
+.nav-menu-btn {
     user-select: none;
 }
 
@@ -285,6 +283,19 @@ ul {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     flex-wrap: wrap;
+}
+
+stack-animation {
+    height: 120vw;
+    max-height: 500px;
+}
+
+webtape-grow-animation {
+    height: 350px;
+}
+
+landing-page-animation {
+    height: 500px;
 }
 
 @media screen and (max-width: 991px) {
